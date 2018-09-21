@@ -11,17 +11,17 @@ int _tmain(int argc, _TCHAR* argv[])
 	CSmtp smtp(
 		25,								/*smtp端口*/
 		"smtp.126.com",					/*smtp服务器地址*/
-		"user@126.com",	        /*源邮箱地址*/
-		"password",					/*邮箱密码*/
-		"123@qq.com",	    /*目的邮箱地址*/
-		"测试c/c++",							/*主题*/
+		"zhangsan@126.com",	        /*源邮箱地址*/
+		"passwd",					/*邮箱密码*/
+		"lisi@qq.com",	    /*目的邮箱地址*/
+		"test",							/*主题*/
 		"正文测试"		/*邮件正文*/
 	);
 	
 	// 添加附件时注意,\一定要写成\\，因为转义字符的缘故
 	// Addattachment:添加附件  CSmtp::DeleteAttachment函数删除附件  
 	string filePath;
-	filePath = "timg.jpg";
+	filePath = "d:\\msdia80.dll";
 	smtp.AddAttachment(filePath);
 
 	int err;
